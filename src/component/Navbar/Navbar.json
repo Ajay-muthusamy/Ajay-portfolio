@@ -1,0 +1,21 @@
+[
+  {
+    "title":"home",
+    "icon":"FaHome"
+  },
+  {
+    "title":"about",
+    "icon":"IoPersonSharp"
+  },
+  {
+    "title":"project",
+    "icon":"HiOutlineDesktopComputer"
+  }
+  ,
+  {
+    "title":"Resume",
+    "icon":"SlEnvolopeLetter"
+  }
+]
+
+  
