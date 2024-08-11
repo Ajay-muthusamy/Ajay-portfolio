@@ -1,20 +1,25 @@
 [
   {
     "title":"home",
-    "icon":"FaHome"
+    "icon":"FaHome",
+    "link": "/home"
+    
   },
   {
     "title":"Skills",
-    "icon":"VscAzureDevops"
+    "icon":"VscAzureDevops",
+    "link":"/Skills"
   },
   {
     "title":"project",
-    "icon":"HiOutlineDesktopComputer"
+    "icon":"HiOutlineDesktopComputer",
+    "link": "/project"
   }
   ,
   {
     "title":"Resume",
-    "icon":"SlEnvolopeLetter"
+    "icon":"SlEnvolopeLetter",
+    "link": "/resume"
   }
 ]
 

@@ -25,7 +25,7 @@ const ParticlesBg = (props) => {
       background: {
         color: "#000000", // Set the background color directly
         image: `url(${image})`, // Set the background image URL correctly
-        // Optional: adjusts the image size
+        backgroundSize: "cover",// Optional: adjusts the image size
         position: "center", // Optional: adjusts the image position
         repeat: "no-repeat", 
       },

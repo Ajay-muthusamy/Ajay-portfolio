@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaHome } from "react-icons/fa";
+import {Link } from "react-router-dom";
 import { IoPersonSharp } from "react-icons/io5";
 import { HiOutlineDesktopComputer } from "react-icons/hi";
 import { SlEnvolopeLetter } from "react-icons/sl";
@@ -23,6 +24,10 @@ const Navbar = () => {
     setMenuOpen(!menuOpen);
   };
 
+  const GitHandlebtn = () =>{
+    window.location.href="https://github.com/Ajay-muthusamy/Ajay-portfolio"
+  }
+
   return (
     <div>
     <section className="py-1 bg-[#14141b73] text-white px-8 ">
@@ -37,20 +42,19 @@ const Navbar = () => {
               return (
                 <li
                   key={index}
-                  className="flex items-center space-x-2 text-[1rem] hover:border-b-4 rounded-sm hover:border-[#CD5FF8] hover:duration-150 py-2"
+                  className="flex items-center space-x-2 text-[1rem] hover:text-[#CE5FF8] hover:scale-110 py-2"
                 >
                   <p className="text-2xl mb-1">
                     {IconComponent ? <IconComponent /> : null}
                   </p>
-                  <span className="capitalize font-sans">{data.title}</span>
+                  <Link to={data.link} className="capitalize font-sans">{data.title}</Link>
                 </li>
               );
             })}
-            <button className="text-2xl bg-[#482B65] px-6 py-1 rounded-sm">
+            <button className="text-2xl bg-[#482B65] px-6 py-1 rounded-sm" onClick={GitHandlebtn}>
               <FaGithubAlt />
             </button>
           </ul>
-          {/* Toggle Button for Mobile Menu */}
           <div className="md:hidden flex items-center">
             <button onClick={toggleMenu} className="text-2xl">
               <CiMenuBurger />
@@ -59,7 +63,6 @@ const Navbar = () => {
         </nav>
       </div>
     </section>
-     {/* Mobile Menu */}
      {menuOpen && (
         <div className="h-screen absolute flex flex-col items-center bg-[#12121f] text-white font-bold w-full py-8  left-0 right-0 drop-shadow-md rounded-lg duration-500 z-10 ">
           <ul className="flex flex-col space-y-4 justify-center mt-10 delay-150">
@@ -68,17 +71,18 @@ const Navbar = () => {
               return (
                 <li
                   key={index}
-                  className="flex items-center space-x-2 text-[1rem]  rounded-sm  hover:duration-150  "
+                  className="flex items-center space-x-2 text-[1rem]  rounded-sm  hover:duration-150  hover:text-[#CE5FF8] hover:scale-110"
                 >
                   <p className="text-2xl mb-10">
                     {IconComponent ? <IconComponent /> : null}
                   </p>
-                  <span className="capitalize font-sans mb-10">{data.title}</span>
+                  <Link to={data.link} className="capitalize font-sans mb-10 "  onClick={() => setMenuOpen(false)} >{data.title}</Link>
                 </li>
               );
             })}
           </ul>
-          <button className="text-1xl bg-[#482B65] px-6 py-1 rounded-sm flex gap-3 font-mono">
+          <button className="text-1xl bg-[#482B65] px-6 py-1 rounded-sm flex gap-3 font-mono"
+          onClick={GitHandlebtn} >
               <FaGithubAlt className="mt-1"/> Github
             </button>
         </div>

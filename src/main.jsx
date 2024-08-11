@@ -1,10 +1,12 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
+import Render from './Render'
+import ParticlesBg from './component/ParticlesBg/ParticlesBg'
 import './index.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <Render />
+    <ParticlesBg />
   </StrictMode>,
 )
