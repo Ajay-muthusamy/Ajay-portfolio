@@ -6,11 +6,12 @@ import { SlEnvolopeLetter } from "react-icons/sl";
 import Navbarjson from "../Navbar/Navbar.json";
 import { FaGithubAlt } from "react-icons/fa6";
 import { CiMenuBurger } from "react-icons/ci";
+import { VscAzureDevops } from "react-icons/vsc";
 
 // Map JSON icon names to actual React components
 const iconMap = {
   FaHome: FaHome,
-  IoPersonSharp: IoPersonSharp,
+  VscAzureDevops: VscAzureDevops,
   HiOutlineDesktopComputer: HiOutlineDesktopComputer,
   SlEnvolopeLetter: SlEnvolopeLetter,
 };
@@ -24,7 +25,7 @@ const Navbar = () => {
 
   return (
     <div>
-    <section className="py-1 bg-[#14141b73] text-white px-8">
+    <section className="py-1 bg-[#14141b73] text-white px-8 ">
       <div className="flex justify-between items-center gap-8">
         <div className="text-white py-4">
           <h1 className="text-4xl text-[#CE5FF8] font-bold">Aj.</h1>
