@@ -4,6 +4,8 @@ import App from './App'
 import Skills from './component/Skill/Skills';
 import Navbar from './component/Navbar/Navbar';
 import Footer from './component/Footer/Footer';
+import TechProject from './component/Project/TechProject';
+
 const Render = () => {
   return (
     <BrowserRouter>
@@ -12,6 +14,7 @@ const Render = () => {
           <Route path="/" element={<App />} />
           <Route path="/home" element={<App />} />
           <Route path="/Skills" element={<Skills />} />
+          <Route path="/project" element={<TechProject />} />
           {/* <Route path="*" element={<NoPage />} /> */}
       </Routes>
       <Footer />

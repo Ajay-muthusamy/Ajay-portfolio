@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useRef, useEffect } from 'react';
 import { motion } from "framer-motion";
+import VanillaTilt from 'vanilla-tilt';
+
 import ajayProfile from "../../assets/ajay.png";
 
 const Self = () => {
+  const tiltRef = useRef(null);
+  useEffect(() => {
+    VanillaTilt.init(tiltRef.current, {
+      max: 25,
+      speed: 400,
+      glare: true,
+      "max-glare": 0.5,
+    });
+    return () => tiltRef.current?.vanillaTilt.destroy();
+  }, []);
   return (
     <div className="py-28">
       <main className="text-white font-sans flex flex-col md:flex-row justify-center gap-10 items-center ">
@@ -39,7 +51,7 @@ const Self = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
         >
-          <img src={ajayProfile} alt="" className="w-96" />
+          <img src={ajayProfile} alt="" className="w-96" ref={tiltRef}/>
         </motion.div>
       </main>
     </div>
