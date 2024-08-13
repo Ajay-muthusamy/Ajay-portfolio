@@ -1,5 +1,5 @@
 import React from "react";
-import Github from "./github";
+import GitCal from "./GitCal";
 import Tooltech from "./Tooltech";
 
 const Skills = () => {
@@ -238,7 +238,7 @@ const Skills = () => {
 
       </div>
       <Tooltech />
-      <Github />
+      <GitCal />
     </section>
   );
 };

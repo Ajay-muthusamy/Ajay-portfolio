@@ -2,7 +2,7 @@ import React from "react";
 import GitHubCalendar from "react-github-calendar";
 import { Row } from "react-bootstrap";
 
-function Github() {
+const GitCal = () => {
   return (
     <section className="text-white   font-sans  m-3">
     <Row style={{ justifyContent: "center", paddingBottom: "10px" }} className="w-full">
@@ -15,7 +15,7 @@ function Github() {
       />
     </Row>
     </section>
-  );
+  )
 }
 
-export default Github;
+export default GitCal
