@@ -16,7 +16,7 @@ const Home = () => {
         <h1 className="mb-4 text-4xl md:text-5xl font-bold tracking-tight text-white font-sans">
           Hi, I'm Ajay👋
         </h1>
-        <span className="text-2xl font-bold text-[#B968C7] md:text-4xl mb-1">
+      <span className="text-2xl font-bold text-[#B968C7] md:text-4xl mb-1">
           <Typewriter
             words={["Full Stack Developer </>", "Graphic Designer 🖥️"]}
             loop={20}
