@@ -5,6 +5,7 @@ import Skills from './component/Skill/Skills';
 import Navbar from './component/Navbar/Navbar';
 import Footer from './component/Footer/Footer';
 import TechProject from './component/Project/TechProject';
+import Resume from './component/Resume/Resume';
 
 const Render = () => {
   return (
@@ -15,6 +16,8 @@ const Render = () => {
           <Route path="/home" element={<App />} />
           <Route path="/Skills" element={<Skills />} />
           <Route path="/project" element={<TechProject />} />
+          <Route path="/resume" element={<Resume />} />
+          
           {/* <Route path="*" element={<NoPage />} /> */}
       </Routes>
       <Footer />

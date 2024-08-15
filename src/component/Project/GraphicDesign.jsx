@@ -14,8 +14,7 @@ const GraphicDesign = () => {
               🖥️ SWARAM 2K24 OFFICIAL LOGO
             </h1>
             <h1 className="py-3">
-              Here's a LinkedIn post description for your work on Swaran 2K24:
-              --- 🎨 Proud to have contributed to my college’s cultural event,
+              🎨 Proud to have contributed to my college’s cultural event,
               Swaran 2K24, as the poster designer! I had the opportunity to
               design the event logo using Photoshop and Cinema 4D, bringing our
               vision to life with a unique and creative touch. It was an amazing
