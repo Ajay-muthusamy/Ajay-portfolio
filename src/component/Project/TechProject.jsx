@@ -1,39 +1,52 @@
 import React, { useRef, useEffect } from "react";
 import VanillaTilt from "vanilla-tilt";
-import ResortImg from '../../assets/resort/Screenshot (580).png';
-import FoodWeb from '../../assets/resort/Screenshot (305).png';
-import Foody from '../../assets/resort/Screenshot (526).png';
-import Tailwind_Page from '../../assets/resort/Screenshot (582).png';
+import ResortImg from "../../assets/resort/Screenshot (580).png";
+import FoodWeb from "../../assets/resort/Screenshot (305).png";
+import Foody from "../../assets/resort/Screenshot (526).png";
+import Tailwind_Page from "../../assets/resort/Screenshot (582).png";
+import baavacracker from '../../assets/post.jpg'
 import GraphicDesign from "./GraphicDesign";
 import { FaGithubAlt } from "react-icons/fa6";
+import { MdRocketLaunch } from "react-icons/md";
 
 const TechProjects = () => {
   const projects = [
     {
+      title: "Baava Crackers",
+      desc: "I built the BAAVA CRACKERS 🎆 website using the MERN stack 💻, creating an easy-to-use interface where customers can browse and adjust cracker product quantities 🔢. MongoDB 🗄️ securely manages data, while the admin dashboard 🛠️ enables stock monitoring and PDF downloads 📄. React’s responsive design 🌐 provides an engaging experience, and Express.js with Node.js ensures seamless backend operations, perfect for peak seasonal demand 🎉.",
+      img: baavacracker,
+      link: "https://github.com/Ajay-muthusamy/foodvillasmain",
+      live: "https://baavacrackers.in/",
+    },
+    {
       title: "Food Villa ",
       desc: "🌟 Throwback to My First Web Development Project: Food Villa! 🍔....At the start of my web development journey, I designed a simple landing page called Food Villa using just HTML and CSS. This project marks the beginning of my adventure into web design and development, showcasing my initial skills in creating a clean and engaging landing page.",
       img: FoodWeb,
-      link:"https://github.com/Ajay-muthusamy/foodvillasmain"
+      link: "https://github.com/Ajay-muthusamy/foodvillasmain",
+      live: "#",
     },
 
     {
       title: "Resort Booking System",
       desc: "🚀 Resort Booking Management System built with React, Bootstrap, Express.js, and PostgreSQL. This app allows users to easily search, view, and book resorts, with an admin panel for managing bookings and secure, real-time updates. Stack used:  #React #Bootstrap #ExpressJS #PostgreSQL",
       img: ResortImg,
-      link:"https://github.com/Ajay-muthusamy/Resort_Mangament"
+      link: "https://github.com/Ajay-muthusamy/Resort_Mangament",
+      live: "#",
     },
     {
       title: "Food Recipe Website",
       desc: "🍽️ Food Recipe Website!** 🥘 This platform allows users to upload and view a variety of delicious recipes with ease. Built with React for a responsive frontend, Bootstrap for modern styling, MongoDB for data storage, and Express.js for backend functionality, it offers a seamless experience for exploring and sharing recipes. Stack used: #React #Bootstrap #MongoDB #ExpressJS",
       img: Foody,
-      link:"https://github.com/Ajay-muthusamy/Food-Recipe-Application"
+      link: "https://github.com/Ajay-muthusamy/Food-Recipe-Application",
+      live: "#",
     },
     {
       title: "Responsive Home Page",
       desc: "🚀 My latest project—a landing page built with React and Tailwind CSS! This was a great exercise in leveraging Tailwind's flexibility to create a clean, responsive design. The smooth integration with React made the development process efficient and enjoyable. It’s been a valuable experience in honing my front-end skills, and I'm eager to explore more with these tools. Would love to hear your thoughts!",
       img: Tailwind_Page,
-      link:"https://github.com/Ajay-muthusamy/responsive-tailwind-homePage"
-    }
+      link: "https://github.com/Ajay-muthusamy/responsive-tailwind-homePage",
+      live: "#",
+    },
   ];
 
   const tiltRefs = useRef([]);
@@ -45,7 +58,7 @@ const TechProjects = () => {
           max: 15,
           speed: 400,
           glare: true,
-          "max-glare": 0.2  ,
+          "max-glare": 0.2,
         });
       }
     });
@@ -55,6 +68,10 @@ const TechProjects = () => {
   }, [projects]);
 
   const handleGithubLink = (link) => {
+    window.open(link, "_blank", "noopener,noreferrer");
+  };
+
+  const handleLiveLink = (link) => {
     window.open(link, "_blank", "noopener,noreferrer");
   };
 
@@ -79,17 +96,30 @@ const TechProjects = () => {
               <h1 className="font-mono">{project.title}</h1>
               <p className="mt-2 text-sm">{project.desc}</p>
             </div>
-            <button 
-              onClick={() => handleGithubLink(project.link)} 
-              className="bg-violet-800 font-sans rounded-lg px-4 py-2 mt-4 flex"
-            >
-              <FaGithubAlt className="mt-1 text-1xl"/>&nbsp;Github
-            </button>
+
+            <div className="flex justify-between items-center">
+              <button
+                onClick={() => handleGithubLink(project.link)}
+                className="bg-violet-800 font-sans rounded-lg px-4 py-2 mt-4 flex"
+              >
+                <FaGithubAlt className="mt-1 text-1xl" />
+                &nbsp;Github
+              </button>
+
+              <div>
+                <button
+                  className="bg-violet-800 font-sans rounded-lg px-4 py-2 mt-4 flex"
+                  onClick={() => handleLiveLink(project.live)}
+                >
+                  <MdRocketLaunch className="mt-1 me-2" /> Live
+                </button>
+              </div>
+            </div>
           </div>
         ))}
       </div>
       <div className="mt-20">
-      <GraphicDesign />
+        <GraphicDesign />
       </div>
     </div>
   );
